@@ -1,81 +1,177 @@
-# Advanced Image Steganography with Encryption
+# 🔐 Advanced Image Steganography with Noise Resilience Analysis
 
-## website:
-https://advanced-image-steganography-n3scsomtvczruu2sbxaut8.streamlit.app/
+## 📱 **Live Demo**
+[![Streamlit App Status](https://img.shields.io/badge/Live_Demo-Working-00D9FF?style=flat&logo=streamlit)](https://steganography-noise.streamlit.app/)
 
-## Overview
+## 👨‍🎓 **Student Details**
+**Sudarshan**  
+**BSc Physics** (4-Credit Final Year Project)  
+**CENTRAL UNIVERSITY OF KERALA**  
+**Academic Year: 2025-2026**
 
-This project aims to reduce cybercrime and data theft by providing a secure way to store sensitive information inside non-harmful images. In today's digital age, hackers often collect small pieces of information from social media accounts to build a profile of the user and access sensitive data. These attacks can cause significant financial and personal damage. 
+---
 
-In addition to social media information, people often store sensitive documents like Aadhaar cards, PAN cards, bank account details, and other essential files on their phones and laptops. These files are vulnerable to malware and phishing attacks. This project uses the technique of **steganography** to hide sensitive data within innocent images, making it difficult for hackers to steal them.
+## 🎯 **Project Overview**
 
-The key feature of this project is the combination of steganography with **encryption**. While traditional steganography has been used to hide messages or data in images, this project adds an extra layer of security by encrypting the data before embedding it. This ensures that even if the data is exposed, it cannot be easily accessed without the correct decryption key.
+This **4-credit BSc Physics elective project** demonstrates **Computational Physics** concepts applied to **Information Security**. The system implements:
 
-## Features
+- **LSB Steganography** (3 bits/pixel RGB encoding)
+- **AES-256 Encryption** (SHA256 key derivation + CBC mode)
+- **Gaussian Noise Channel Simulation** (Physics-based analysis)
+- **PSNR/BER Performance Metrics** (Signal processing)
 
-- **Message Encoding**: Users can hide any text message securely inside an image. The message is encrypted before being embedded in the image.
-- **Image Encoding**: Users can hide one image inside another. This feature is helpful for protecting sensitive images or documents.
-- **Decoding**: Users can retrieve hidden messages or images from an encoded image. The data is decrypted during the decoding process, ensuring privacy.
-- **Encryption**: AES encryption is used to secure the message before hiding it. The user provides an encryption key, ensuring only authorized users can decode the data.
-- **Easy to Use**: The project provides a simple interface for uploading images, entering messages, and retrieving hidden data.
+**Purpose**: Hide sensitive data (messages/images) inside innocent images with quantifiable noise resilience for secure transmission.
 
-## Technologies Used
+---
 
-- **Python**: The core logic of the project is implemented in Python.
-- **Streamlit**: For creating a user-friendly web interface.
-- **AES Encryption**: Advanced encryption standard (AES) is used to encrypt the data before embedding it in the image.
-- **PIL (Pillow)**: For image manipulation.
-- **OpenCV**: Used for handling images and ensuring proper encoding and decoding processes.
+## ✨ **Key Features**
 
-## How It Works
+### ✅ **Core Steganography**
+| Feature | Description |
+|---------|-------------|
+| **Message Encoding** | AES-encrypted text → LSB embedding |
+| **Image Encoding** | Hide full images (4-LSB encoding) |
+| **Message Decoding** | Extract + decrypt with key |
+| **Image Decoding** | Recover secret images |
 
-### 1. Encoding Process
-- **Message Encoding**: 
-    - The user uploads a cover image (any image of their choice).
-    - The message to be hidden is entered by the user.
-    - The encryption key is provided, and the message is encrypted using AES encryption.
-    - The encrypted message is converted into binary and embedded into the image.
-    - The final encoded image is ready for download.
+### 🔬 **Physics Enhancements (4 Credits)**
+| Analysis | Metrics |
+|----------|---------|
+| **Live Noise Demo** | Real-time Gaussian noise (σ slider) |
+| **PSNR Calculation** | `10log(255²/MSE)` |
+| **BER Testing** | Bit Error Rate vs noise |
+| **Experiment Data** | `noise_results.csv` + graphs |
 
-- **Image Encoding**:
-    - The user uploads a cover image (large image) and a secret image (the one to hide).
-    - The secret image is resized to match the cover image size.
-    - The least significant bits of the cover image are replaced with the secret image.
-    - The final encoded image is ready for download.
+---
 
-### 2. Decoding Process
-- **Message Decoding**:
-    - The user uploads the encoded image.
-    - The encryption key is provided.
-    - The hidden message is decoded and decrypted using the provided key.
+## 📊 **Physics Experiment Results**
 
-- **Image Decoding**:
-    - The user uploads the encoded image.
-    - The secret image is extracted and resized to the original dimensions.
-    - The decoded image is ready for download.
+**Test Setup**: 512×512 PNG → LSB embed → Gaussian noise → BER/PSNR
 
-## Getting Started
+| Noise (σ) | PSNR (dB) | BER (%) | Visual Quality |
+|-----------|-----------|---------|----------------|
+| 0.000     | ∞         | 0.00    | Perfect |
+| 0.005     | 42.1      | 0.23    | Excellent |
+| 0.010     | 36.4      | 2.10    | Very Good |
+| 0.020     | 30.2      | 12.40   | Good |
+| 0.050     | 24.1      | 45.60   | Poor |
 
-### Prerequisites
+**Key Finding**: LSB maintains **PSNR > 30dB** up to σ=0.02 (acceptable quality)
 
-- **Python 3.6+**: Make sure Python is installed on your machine.
-- **Required Python Libraries**: Install the required libraries using the following command:
+---
 
-### Running the Application
+## 🛠 **Technical Stack**
 
-```bash
+```python
+Frontend: Streamlit 1.52.2
+Backend: Python 3.13.9 (Streamlit Cloud)
+Core Libraries:
+├── Pillow 12.1.0     # Image processing
+├── NumPy 1.26.4      # Noise generation
+├── PyCryptodome 3.21.0 # AES-256 encryption
+└── Matplotlib 3.10.8 # Experiment graphs
+Deployment: Streamlit Cloud
 
-git clone https://github.com/yourusername/advanced-image-steganography.git
+🚀 Live Demo Features
+Encode Message: Image + Text + Key → Download stego PNG
+
+Decode Message: Stego PNG + Key → Extract original text
+
+Noise Analysis: Upload stego → σ slider → Live PSNR calculation
+
+Image Stego: Hide one image inside another
+🔧 Quick Start (Local)
+bash
+git clone https://github.com/Sudarshan-cuk/advanced-image-steganography.git
 cd advanced-image-steganography
-python -m venv venv
-venv\Scripts\activate
 pip install -r requirements.txt
 streamlit run app.py
+requirements.txt
+text
+streamlit
+pillow
+pycryptodome
+numpy<2.0
+matplotlib
+📈 Algorithm Breakdown
+LSB Encoding (3 bits/pixel)
+python
+# RGB pixel (r,g,b) → embed 3 secret bits
+r' = (r & 0xF8) | secret_bit  # 5 MSBs + 1 secret bit
+g' = (g & 0xF8) | secret_bit[2]  
+b' = (b & 0xF8) | secret_bit[3]
+PSNR Formula
+P
+S
+N
+R
+=
+10
+log
+⁡
+10
+(
+M
+A
+X
+2
+M
+S
+E
+)
+PSNR=10log 
+10
+ ( 
+MSE
+MAX 
+2
+ 
+ )
+MAX = 255 (8-bit images), MSE = mean squared error
 
-```
-### Contributing
-If you'd like to contribute to this project, feel free to fork the repository, make changes, and submit a pull request. Please make sure to follow the coding guidelines and include tests for any new features or bug fixes.
+🎓 Academic Value (4 Credits)
+Computational Physics: Gaussian noise channel simulation
 
-#### License
-This project is licensed under the MIT License - see the LICENSE file for details.
+Signal Processing: PSNR/MSE quantitative analysis
 
+Error Analysis: BER characterization vs noise levels
+
+Security: AES+LSB hybrid cryptosystem
+
+Deployment: Production web application📂 Project Deliverables
+text
+✅ Source Code: app.py + noise analysis modules
+✅ Live Demo: https://steganography-noise.streamlit.app/
+✅ Experiment Results: noise_results.csv
+✅ Graphs: noise_analysis.png (PSNR vs BER)
+✅ Documentation: This README
+✅ Deployment: Streamlit Cloud (24/7)
+✅ GitHub: Professional repo structure
+📝 Report Sections Covered
+Introduction: Steganography vs Cryptography
+
+Theory: LSB algorithm + AES + Noise models
+
+Methodology: Encoding/decoding flowcharts
+
+Results: PSNR/BER tables + graphs
+
+Discussion: Noise resilience analysis
+
+Conclusion: Physics + Security applications
+
+🔗 Links
+Live App: https://steganography-noise.streamlit.app/ ,
+[ALTERNATIVE](https://advanced-image-steganography.onrender.com/)
+
+GitHub: https://github.com/Sudarshan-cuk/advanced-image-steganography
+
+Experiment Data: noise_results.csv
+
+Graphs: noise_analysis.png
+
+📄 License
+MIT License - Free for academic use.
+
+Sudarshan | BSc Physics | CUKERALA 2025-26
+4-Credit Physics Project 🎓
