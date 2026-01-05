@@ -1,4 +1,6 @@
 import streamlit as st
+# Streamlit page config must be called before any other Streamlit command
+st.set_page_config(page_title="Advanced Image Steganography", layout="centered")
 from PIL import Image
 import hashlib
 from Crypto import Random
@@ -6,6 +8,8 @@ from Crypto.Cipher import AES
 from base64 import b64encode, b64decode
 import numpy as np
 import io
+import numpy as np
+from metrics_and_noise import add_gaussian_noise, compute_psnr
 
 
 # AES Cipher Class
@@ -117,8 +121,7 @@ def decode_image(encoded_image, secret_size):
 
 # Main Streamlit App
 def main():
-    # Set page config for a colorful and attractive app
-    st.set_page_config(page_title="Advanced Image Steganography", layout="centered")
+    # Main app UI (page config is set at module import time)
     
     # Inject custom CSS
     st.markdown("""
@@ -226,6 +229,31 @@ def main():
                     st.error("🚨 Please upload an encoded image.")
 
 
+# Noise Resilience Demo Section
+st.markdown("---")
+st.header("🔬 Noise Resilience Analysis")
+
+uploaded_stego = st.file_uploader("Upload stego image for noise test", type=["png","jpg"], key="noise_test")
+
+sigma_slider = st.slider("Gaussian noise σ", 0.0, 0.05, 0.01, 0.005)
+
+if uploaded_stego is not None:
+    img = Image.open(uploaded_stego).convert("RGB")
+    img_np = np.array(img)
+    
+    noisy_img = add_gaussian_noise(img_np, sigma_slider)
+    psnr_val = compute_psnr(img_np, noisy_img)
+    
+    col1, col2 = st.columns(2)
+    with col1:
+        st.subheader("Original Stego")
+        st.image(img_np, use_container_width=True)
+    with col2:
+        st.subheader(f"Noisy Stego (σ={sigma_slider:.3f})")
+        st.image(noisy_img, use_container_width=True)
+    
+    st.success(f"PSNR: **{psnr_val:.2f} dB**")
+    st.info("Higher PSNR = better quality. Lower σ = less noise.")
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,92 @@
+Using pip 25.3 from C:\Users\sudar\Project\advanced-image-steganography\.venv\Lib\site-packages\pip (python 3.13)
+Requirement already satisfied: streamlit==1.40.0 in c:\users\sudar\project\advanced-image-steganography\.venv\lib\site-packages (from -r requirements.txt (line 1)) (1.40.0)
+Requirement already satisfied: pillow==11.0.0 in c:\users\sudar\project\advanced-image-steganography\.venv\lib\site-packages (from -r requirements.txt (line 2)) (11.0.0)
+Requirement already satisfied: pycryptodome==3.21.0 in c:\users\sudar\project\advanced-image-steganography\.venv\lib\site-packages (from -r requirements.txt (line 3)) (3.21.0)
+  Link requires a different Python (3.13.9 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/3a/be/650f9c091ef71cb01d735775d554e068752d3ff63d7943b26316dc401749/numpy-1.21.2.zip (from https://pypi.org/simple/numpy/) (requires-python:>=3.7,<3.11)
+  Link requires a different Python (3.13.9 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/5f/d6/ad58ded26556eaeaa8c971e08b6466f17c4ac4d786cd3d800e26ce59cc01/numpy-1.21.3.zip (from https://pypi.org/simple/numpy/) (requires-python:>=3.7,<3.11)
+  Link requires a different Python (3.13.9 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/fb/48/b0708ebd7718a8933f0d3937513ef8ef2f4f04529f1f66ca86d873043921/numpy-1.21.4.zip (from https://pypi.org/simple/numpy/) (requires-python:>=3.7,<3.11)
+  Link requires a different Python (3.13.9 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/c2/a8/a924a09492bdfee8c2ec3094d0a13f2799800b4fdc9c890738aeeb12c72e/numpy-1.21.5.zip (from https://pypi.org/simple/numpy/) (requires-python:>=3.7,<3.11)
+  Link requires a different Python (3.13.9 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/45/b7/de7b8e67f2232c26af57c205aaad29fe17754f793404f59c8a730c7a191a/numpy-1.21.6.zip (from https://pypi.org/simple/numpy/) (requires-python:>=3.7,<3.11)
+  Link requires a different Python (3.13.9 not in: '<3.13,>=3.9'): https://files.pythonhosted.org/packages/55/b3/b13bce39ba82b7398c06d10446f5ffd5c07db39b09bd37370dc720c7951c/numpy-1.26.0.tar.gz (from https://pypi.org/simple/numpy/) (requires-python:<3.13,>=3.9)
+  Link requires a different Python (3.13.9 not in: '<3.13,>=3.9'): https://files.pythonhosted.org/packages/78/23/f78fd8311e0f710fe1d065d50b92ce0057fe877b8ed7fd41b28ad6865bfc/numpy-1.26.1.tar.gz (from https://pypi.org/simple/numpy/) (requires-python:<3.13,>=3.9)
+Collecting numpy==1.26.4 (from -r requirements.txt (line 4))
+  Using cached numpy-1.26.4.tar.gz (15.8 MB)
+  Installing build dependencies: started
+  Running command installing build dependencies for numpy
+  Using pip 25.3 from C:\Users\sudar\Project\advanced-image-steganography\.venv\Lib\site-packages\pip (python 3.13)
+  Collecting Cython<3.1,>=0.29.34
+    Obtaining dependency information for Cython<3.1,>=0.29.34 from https://files.pythonhosted.org/packages/a6/5f/bbfaf2b5f7bf78854ecbc82f8473a3892ae5580e0c5bd0d4a82580b39ed3/Cython-3.0.12-cp313-cp313-win_amd64.whl.metadata
+    Using cached Cython-3.0.12-cp313-cp313-win_amd64.whl.metadata (3.6 kB)
+  Collecting meson-python<0.16.0,>=0.15.0
+    Obtaining dependency information for meson-python<0.16.0,>=0.15.0 from https://files.pythonhosted.org/packages/1f/60/b10b11ab470a690d5777310d6cfd1c9bdbbb0a1313a78c34a1e82e0b9d27/meson_python-0.15.0-py3-none-any.whl.metadata
+    Using cached meson_python-0.15.0-py3-none-any.whl.metadata (4.1 kB)
+  Collecting colorama (from meson-python<0.16.0,>=0.15.0)
+    Obtaining dependency information for colorama from https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl.metadata
+    Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+  Collecting meson>=1.2.3 (from meson-python<0.16.0,>=0.15.0)
+    Obtaining dependency information for meson>=1.2.3 from https://files.pythonhosted.org/packages/32/4f/c398c6f06ece1c6c246e008d5dac3824c98f54d3eb3d8014f4910afd6d48/meson-1.10.0-py3-none-any.whl.metadata
+    Using cached meson-1.10.0-py3-none-any.whl.metadata (1.8 kB)
+  Collecting pyproject-metadata>=0.7.1 (from meson-python<0.16.0,>=0.15.0)
+    Obtaining dependency information for pyproject-metadata>=0.7.1 from https://files.pythonhosted.org/packages/c0/57/e69a1de45ec7a99a707e9f1a5defa035a48de0cae2d8582451c72d2db456/pyproject_metadata-0.10.0-py3-none-any.whl.metadata
+    Using cached pyproject_metadata-0.10.0-py3-none-any.whl.metadata (6.3 kB)
+  Collecting packaging>=23.2 (from pyproject-metadata>=0.7.1->meson-python<0.16.0,>=0.15.0)
+    Obtaining dependency information for packaging>=23.2 from https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl.metadata
+    Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+  Using cached Cython-3.0.12-cp313-cp313-win_amd64.whl (2.8 MB)
+  Using cached meson_python-0.15.0-py3-none-any.whl (25 kB)
+  Using cached meson-1.10.0-py3-none-any.whl (1.1 MB)
+  Using cached pyproject_metadata-0.10.0-py3-none-any.whl (19 kB)
+  Using cached packaging-25.0-py3-none-any.whl (66 kB)
+  Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+  Installing collected packages: packaging, meson, Cython, colorama, pyproject-metadata, meson-python
+    Creating C:\Users\sudar\AppData\Local\Temp\pip-build-env-edvttiyi\overlay\Scripts
+
+  ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+  streamlit 1.40.0 requires packaging<25,>=20, but you have packaging 25.0 which is incompatible.
+  Successfully installed Cython-3.0.12 colorama-0.4.6 meson-1.10.0 meson-python-0.15.0 packaging-25.0 pyproject-metadata-0.10.0
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Running command Getting requirements to build wheel
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Running command installing backend dependencies for numpy
+  Using pip 25.3 from C:\Users\sudar\Project\advanced-image-steganography\.venv\Lib\site-packages\pip (python 3.13)
+  Collecting ninja>=1.8.2
+    Obtaining dependency information for ninja>=1.8.2 from https://files.pythonhosted.org/packages/29/45/c0adfbfb0b5895aa18cec400c535b4f7ff3e52536e0403602fc1a23f7de9/ninja-1.13.0-py3-none-win_amd64.whl.metadata
+    Using cached ninja-1.13.0-py3-none-win_amd64.whl.metadata (5.1 kB)
+  Using cached ninja-1.13.0-py3-none-win_amd64.whl (309 kB)
+  Installing collected packages: ninja
+  Successfully installed ninja-1.13.0
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Running command Preparing metadata (pyproject.toml)
+  + C:\Users\sudar\Project\advanced-image-steganography\.venv\Scripts\python.exe C:\Users\sudar\AppData\Local\Temp\pip-install-tnc21zbb\numpy_dd5f2fbae5d240c288eecf24483f25ad\vendored-meson\meson\meson.py setup C:\Users\sudar\AppData\Local\Temp\pip-install-tnc21zbb\numpy_dd5f2fbae5d240c288eecf24483f25ad C:\Users\sudar\AppData\Local\Temp\pip-install-tnc21zbb\numpy_dd5f2fbae5d240c288eecf24483f25ad\.mesonpy-q_x_2hxf -Dbuildtype=release -Db_ndebug=if-release -Db_vscrt=md --native-file=C:\Users\sudar\AppData\Local\Temp\pip-install-tnc21zbb\numpy_dd5f2fbae5d240c288eecf24483f25ad\.mesonpy-q_x_2hxf\meson-python-native-file.ini
+  The Meson build system
+  Version: 1.2.99
+  Source dir: C:\Users\sudar\AppData\Local\Temp\pip-install-tnc21zbb\numpy_dd5f2fbae5d240c288eecf24483f25ad
+  Build dir: C:\Users\sudar\AppData\Local\Temp\pip-install-tnc21zbb\numpy_dd5f2fbae5d240c288eecf24483f25ad\.mesonpy-q_x_2hxf
+  Build type: native build
+  Project name: NumPy
+  Project version: 1.26.4
+  Activating VS 16.11.50
+
+  ..\meson.build:1:0: ERROR: Compiler cl cannot compile programs.
+
+  A full log can be found at C:\Users\sudar\AppData\Local\Temp\pip-install-tnc21zbb\numpy_dd5f2fbae5d240c288eecf24483f25ad\.mesonpy-q_x_2hxf\meson-logs\meson-log.txt
+  error: subprocess-exited-with-error
+  
+  × Preparing metadata (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> No available output.
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  full command: 'C:\Users\sudar\Project\advanced-image-steganography\.venv\Scripts\python.exe' 'C:\Users\sudar\Project\advanced-image-steganography\.venv\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py' prepare_metadata_for_build_wheel 'C:\Users\sudar\AppData\Local\Temp\tmpklbr4pfc'
+  cwd: C:\Users\sudar\AppData\Local\Temp\pip-install-tnc21zbb\numpy_dd5f2fbae5d240c288eecf24483f25ad
+  Preparing metadata (pyproject.toml): finished with status 'error'
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> numpy
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
