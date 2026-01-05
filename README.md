@@ -4,7 +4,7 @@
 [![Streamlit App Status](https://img.shields.io/badge/Live_Demo-Working-00D9FF?style=flat&logo=streamlit)](https://steganography-noise.streamlit.app/)
 
 ## 👨‍🎓 **Student Details**
-**Sudarshan**  
+**Sudarshan Das**  
 **BSc Physics** (4-Credit Final Year Project)  
 **CENTRAL UNIVERSITY OF KERALA**  
 **Academic Year: 2025-2026**
@@ -101,33 +101,7 @@ r' = (r & 0xF8) | secret_bit  # 5 MSBs + 1 secret bit
 g' = (g & 0xF8) | secret_bit[2]  
 b' = (b & 0xF8) | secret_bit[3]
 PSNR Formula
-P
-S
-N
-R
-=
-10
-log
-⁡
-10
-(
-M
-A
-X
-2
-M
-S
-E
-)
-PSNR=10log 
-10
- ( 
-MSE
-MAX 
-2
- 
- )
-MAX = 255 (8-bit images), MSE = mean squared error
+PSNR=10log10(MAX2MSE)PSNR=10log 10 ( MSEMAX*MAX = 255 (8-bit images), MSE = mean squared error
 
 🎓 Academic Value (4 Credits)
 Computational Physics: Gaussian noise channel simulation
