@@ -1,6 +1,5 @@
+pycryptodome==3.20.0
 streamlit
 pillow
-cryptography
 numpy<2.0
-opencv-python-headless
 matplotlib
