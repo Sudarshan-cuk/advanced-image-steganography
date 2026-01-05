@@ -1,6 +1,6 @@
-Numpy==2.1.0
-opencv-python==4.10.0.84
-matplotlib==3.8.3
-pillow==11.0.0
-streamlit==1.40.0
-pycryptodome==3.21.0
+streamlit
+pillow
+cryptography
+numpy<2.0
+opencv-python-headless
+matplotlib
